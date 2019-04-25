@@ -32,7 +32,8 @@ ENV PORT 3000
 ENV PUBLIC_PATH "/"
 
 WORKDIR /usr/src/app/build
-RUN ls
+RUN echo "$PWD"
+RUN echo "$ls"
 
 # Main command
 # CMD [ "npm", "run", "start" ]
