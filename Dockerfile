@@ -26,6 +26,10 @@ COPY . /usr/src/app
 # Port to listener
 EXPOSE 3000
 
+WORKDIR /usr/src/app
+COPY package.json /usr/src/app
+RUN yarn build
+
 # Environment variables
 ENV NODE_ENV production
 ENV PORT 3000
@@ -33,7 +37,8 @@ ENV PUBLIC_PATH "/"
 
 WORKDIR /usr/src/app/build
 RUN echo "$PWD"
-RUN echo "$ls"
+RUN ls
+RUN ls -la
 
 # Main command
 # CMD [ "npm", "run", "start" ]
