@@ -19,6 +19,9 @@ COPY package.json /usr/src/app/
 COPY yarn.lock /usr/src/app/
 
 RUN yarn install
+RUN echo "$PWD"
+RUN ls
+RUN ls -la
 RUN yarn build
 
 # Bundle app source
