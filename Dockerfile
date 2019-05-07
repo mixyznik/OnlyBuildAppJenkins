@@ -19,6 +19,7 @@ COPY package.json /usr/src/app/
 COPY yarn.lock /usr/src/app/
 
 RUN yarn install
+RUN yarn build
 
 # Bundle app source
 COPY . /usr/src/app
@@ -28,7 +29,7 @@ EXPOSE 3000
 
 # WORKDIR /usr/src/app
 # COPY package.json /usr/src/app
-RUN yarn build
+# RUN yarn build
 
 # Environment variables
 ENV NODE_ENV production
