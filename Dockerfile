@@ -19,10 +19,10 @@ COPY package.json /usr/src/app/
 COPY yarn.lock /usr/src/app/
 
 RUN yarn install
-RUN echo "$PWD"
-RUN ls
-RUN ls -la
-RUN yarn build
+# RUN echo "$PWD"
+# RUN ls
+# RUN ls -la
+
 
 # Bundle app source
 COPY . /usr/src/app
@@ -30,9 +30,12 @@ COPY . /usr/src/app
 # Port to listener
 EXPOSE 3000
 
-# WORKDIR /usr/src/app
-# COPY package.json /usr/src/app
-# RUN yarn build
+WORKDIR /usr/src/app
+COPY package.json /usr/src/app
+RUN echo "$PWD"
+RUN ls
+RUN ls -la
+RUN yarn build
 
 # Environment variables
 ENV NODE_ENV production
