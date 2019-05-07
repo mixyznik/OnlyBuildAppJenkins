@@ -26,8 +26,8 @@ COPY . /usr/src/app
 # Port to listener
 EXPOSE 3000
 
-WORKDIR /usr/src/app
-COPY package.json /usr/src/app
+# WORKDIR /usr/src/app
+# COPY package.json /usr/src/app
 RUN yarn build
 
 # Environment variables
