@@ -36,6 +36,9 @@ RUN echo "$PWD"
 RUN ls
 RUN ls -la
 RUN yarn build
+RUN echo "$PWD"
+RUN ls
+RUN ls -la
 
 # Environment variables
 ENV NODE_ENV production
