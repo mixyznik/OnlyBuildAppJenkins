@@ -45,6 +45,8 @@ ENV NODE_ENV production
 ENV PORT 3000
 ENV PUBLIC_PATH "/"
 
+# a
+
 WORKDIR "$PWD"/build
 RUN echo "$PWD"
 RUN ls
