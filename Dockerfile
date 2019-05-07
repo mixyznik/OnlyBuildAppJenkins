@@ -47,10 +47,10 @@ ENV PUBLIC_PATH "/"
 
 # ab
 
-WORKDIR "$PWD"/build
-RUN echo "$PWD"
-RUN ls
-RUN ls -la
+# WORKDIR "$PWD"/build
+# RUN echo "$PWD"
+# RUN ls
+# RUN ls -la
 
 # Main command
 # CMD [ "npm", "run", "start" ]
