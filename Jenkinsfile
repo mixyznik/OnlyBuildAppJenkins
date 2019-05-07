@@ -14,7 +14,7 @@ node {
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t react-app --no-cache .'
         sh 'docker create -ti --name mimi react-app bash'
-        sh 'docker cp mimi:/usr/src/app/build /home/mixy/Desktop/BuildVolume'
+        sh 'docker cp mimi:/usr/src/app/build /deploy'
         sh 'docker rm mimi'
         sh 'docker rmi react-app'
       }
