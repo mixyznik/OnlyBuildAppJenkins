@@ -26,8 +26,8 @@ node {
         sh 'docker cp mimi:/usr/src/app/build /home/mixy/deploy'
         sh 'docker rm mimi'
         sh 'docker rmi react-app'
-        sh 'scp -r /home/mixy/deploy/build mixy@139.162.148.153:/var/www/build'
         sh 'ssh mixy@139.162.148.153 date'
+        sh 'scp -r /home/mixy/deploy/build mixy@139.162.148.153:/var/www/build'
         sh 'sudo service nginx restart'
       }
     }
