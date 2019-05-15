@@ -32,7 +32,7 @@ node {
       }
     }
     stage('Deploy with ssh'){
-        withCredentials([sshUserPrivateKey(credentialsId: 'sshpassword')]) {
+        withCredentials([sshUserPrivateKey(credentialsId: 'sshssh')]) {
            sh 'ssh mixy@139.162.148.153 date'
             //sh 'ssh -o StrictHostKeyChecking=no mixy@139.162.148.153 uptime'
             //sh 'ssh -v mixy@139.162.148.153'
