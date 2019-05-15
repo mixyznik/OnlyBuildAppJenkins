@@ -32,13 +32,8 @@ node {
       }
     }
     stage('Deploy with ssh'){
-        withCredentials([sshUserPrivateKey(credentialsId: 'sshssh')]) {
-           sh 'ssh mixy@139.162.148.153 date'
-            //sh 'ssh -o StrictHostKeyChecking=no mixy@139.162.148.153 uptime'
-            //sh 'ssh -v mixy@139.162.148.153'
-            //sh 'scp -r /home/mixy/deploy/build mixy@139.162.148.153:/var/www/build'
-        }
-    }
+        sh 'ssh mixy@139.162.148.153 date'
+      }
   }
   catch (err) {
     throw err
